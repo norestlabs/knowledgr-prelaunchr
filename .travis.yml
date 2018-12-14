@@ -8,7 +8,7 @@ services:
 addons:
   postgresql: "9.4"
 before_script:
-  - psql -c 'create database prelaunchr_test;' -U postgres
+  - psql -c 'create database knowledgr_prelaunchr;' -U postgres
 script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare

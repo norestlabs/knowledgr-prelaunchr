@@ -1,8 +1,8 @@
 development:
   adapter: postgresql
-  database: prelaunchr_development
+  database: knowledgr_prelaunchr_dev
   host: localhost
 test:
   adapter: postgresql
-  database: prelaunchr_test
+  database: knowledgr_prelaunchr_test
   host: localhost
