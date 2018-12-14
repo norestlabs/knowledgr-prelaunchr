@@ -1,12 +1,18 @@
 <div class="hero">
-  <p class="large brandon">Tell your friends about us!</p>
-  <p class="small brandon">Some description text goes here. It is the best description you can imagine.</p>
-</div>
+  <img src="assets/home/logo.png" />
+  <p class="large brandon">Tell your friends about us and get [benefit]!</p>
+  <p class="small brandon">
+    Practice means to perform, over and over again in the face of all obstacles,
+    some act of vision, of faith, of desire. Practice is a means of inviting the perfection desired.
+    Practice means to perform, over and over again in the face of all obstacles,
+    some act of vision, of faith, of desire. Practice is a means of inviting the perfection desired.
+  </p>
 
-<div class="form-wrap clearfix <%= "ended" if Rails.application.config.ended %>">
-  <% if Rails.application.config.ended %>
-    <%= render "users/campaign_ended" %>
-  <% else %>
-    <%= render "users/campaign_ongoing" %>
-  <% end %>
+  <div class="form-wrap clearfix <%= "ended" if Rails.application.config.ended %>">
+    <% if Rails.application.config.ended %>
+      <%= render "users/campaign_ended" %>
+    <% else %>
+      <%= render "users/campaign_ongoing" %>
+    <% end %>
+  </div>
 </div>

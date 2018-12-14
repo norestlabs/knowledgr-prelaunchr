@@ -1,4 +1,7 @@
 <%= form_for @user, :url => { :action => "create" } do |f| %>
-  <%= f.text_field :email, :placeholder => "Email Address", :class => "email brandon" %>
-  <input class="submit brandon" name="commit" type="submit" value="Refer Friend" />
+  <div class="input-field">
+    <div class="label">Email Address</div>
+    <%= f.text_field :email, :placeholder => "john.smith@mail.com", :class => "email brandon" %>
+  </div>
+  <input class="submit brandon" name="commit" type="submit" value="Refer a Friend" />
 <% end %>

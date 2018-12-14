@@ -1,7 +1,9 @@
 development:
   adapter: postgresql
-  database: knowledgr_prelaunchr_dev
+  database: knowledgr_prelaunchr_development
   host: localhost
+  username: admin
+  password: password
 test:
   adapter: postgresql
   database: knowledgr_prelaunchr_test

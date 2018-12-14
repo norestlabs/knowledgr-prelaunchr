@@ -8,18 +8,13 @@
   <title>Knowledgr</title>
   <link rel="icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
   <link rel="shortcut icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
-
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:title" content="Knowledgr"/>
   <meta property="og:description" content="Knowledgr is coming!"/>
   <meta property="og:image" content="<%= asset_path("refer/truman.png") %>"/>
   <meta property="og:url" content="<%= root_url %>"/>
-  <% if @is_mobile %>
-    <% if @bodyId == 'home' %>
-      <meta name="viewport" content="width=1600" />
-    <% else %>
-      <meta name="viewport" content="width=1120" />
-    <% end %>
-  <% end %>
+  
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= csrf_meta_tags %>
 </head>
