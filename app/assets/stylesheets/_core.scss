@@ -405,10 +405,15 @@ html.home {
 }
 
 #refer .share-wrap {
+  box-sizing: border-box;
+  height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   letter-spacing: 0.13em;
   margin: 0 auto;
-  margin-top: 75px;
 
   .why {
     font-size: 16px;
