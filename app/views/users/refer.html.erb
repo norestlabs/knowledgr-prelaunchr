@@ -5,32 +5,15 @@
   </div>
 </div>
 
-<%
-  referrals_count = @user.referrals.count
-
-  stops = User::REFERRAL_STEPS
-
-  found = nil
-
-  stops.reverse_each { |stop|
-    if stop["count"] <= referrals_count and !found
-      stop["selected"] = true
-      found = stop
-    else
-      stop["selected"] = false
-    end
-  }
-%>
-
 <div class="hero">
   <div class="page-content clearfix">
     <div class="share-wrap">
-      <p class="why brandon">We have added you to the signup queue.</p>
-      <p class="title brandon">You're now in #<span><%= @queue_position %></span> in line,</p>
-      <p class="subtitle brandon">who have collectively invited {#} people.</p>
+      <p class="why brandon">We have added your email address to the signup queue.</p>
+      <p class="title brandon">You're now in #<span><%= @queue_position %></span> in line</p>
+      <p class="subtitle brandon">who have collectively invited <%= @total_users %> people.</p>
       
-      <p class="info-title brandon">Want to help shape Knowledgr?</p>
-      <p class="info-subtitle brandon">We want to select the opinions of our greatest supports.<br/>Tell your friends about us and move ahead in the waiting list.</p>
+      <p class="info-title brandon">What will you question?</p>
+      <p class="info-subtitle brandon">Share this invitation with your friends and move to the front of the waiting list.</p>
       <div class="copy-link brandon"><%= root_url %>?ref=<%= @user.referral_code %></div>
       <% twitter_message = "#Shaving is evolving. Excited for @harrys to launch." %>
       <div class="social-links">
