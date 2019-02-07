@@ -8,6 +8,7 @@ gem 'devise'
 gem 'pg'
 gem 'rails', '~> 4.2'
 gem 'unicorn'
+gem 'google-api-client', '~> 0.8'
 
 
 # Gems used only for assets and not required
