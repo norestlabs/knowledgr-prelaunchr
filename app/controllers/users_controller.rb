@@ -63,8 +63,15 @@ class UsersController < ApplicationController
     service.client_options.application_name = APPLICATION_NAME
     service.authorization = authorize
     spreadsheet_id = '11hxiCSKTAlLp1CJfKndmREgXbFbZVwJl_vdbByIPPKE'
-    range = 'Sheet1!A2:B'
-    value_range_object = Google::Apis::SheetsV4::ValueRange.new(values: {@user.email => @user.referrer ? @user.referrer.id : nil})
+    range = 'Sheet1!A2:C'
+    value_range_object = Google::Apis::SheetsV4::ValueRange.new(
+      range: range,
+      values: [[
+        @user.email,
+        @user.referrer ? @user.referrer.id : nil,
+        @user.referrer ? @user.referrer.email : nil
+      ]]
+    )
     response = service.append_spreadsheet_value(spreadsheet_id, range, value_range_object, value_input_option: 'RAW')
 
     if ref_code and User.find_by_email(@user.email).blank? then
