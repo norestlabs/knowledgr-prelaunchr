@@ -1,3 +1,29 @@
+$observation: #1F4BB6;
+$hypothesis: #2BA3AE;
+$question: #FF6E6E;
+$review: #636363;
+$pink: #FF00A1;
+
+.observation {
+  color: $observation;
+}
+
+.hypothesis {
+  color: $hypothesis;
+}
+
+.question {
+  color: $question;
+}
+
+.review {
+  color: $review;
+}
+
+.pink {
+  color: $pink;
+}
+
 * {
   transition: all 0.5s;
 }
@@ -146,7 +172,7 @@ html.home {
     align-items: center;
 
     .submit {
-      background-color: #ff00a1;
+      background-color: $pink;
       border: none;
       border-radius: 3px;
       // box-shadow: 0 0 5px #de69a5;
@@ -355,7 +381,7 @@ html.home {
 
 #refer .header {
   height: 50px;
-  background: #ff00a1;
+  background: $hypothesis;
   width: 100%;
   overflow: hidden;
   z-index: 1;
