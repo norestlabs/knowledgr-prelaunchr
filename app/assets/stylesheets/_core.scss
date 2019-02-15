@@ -445,7 +445,7 @@ html.home {
   margin: 0 auto;
 
   @media all and (max-width: 500px) {
-    min-height: 100vh;
+    min-height: 115vh;
   }
 
   .why {
@@ -467,7 +467,7 @@ html.home {
     margin-top: 70px;
 
     @media all and (max-width: 500px) {
-      margin-top: 10px;
+      margin-top: 0;
     }
   }
   .subtitle {
