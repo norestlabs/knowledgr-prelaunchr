@@ -373,14 +373,16 @@ html.home {
 }
 
 #refer .page-content {
-  width: 1120px;
+  box-sizing: border-box;
+  padding: 0 20px;
+  width: 100%;
   margin: 0 auto;
   z-index: 0;
   position: relative;
 }
 
 #refer .header {
-  height: 50px;
+  min-height: 50px;
   background: $hypothesis;
   width: 100%;
   overflow: hidden;
@@ -396,11 +398,19 @@ html.home {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media all and (max-width: 500px) {
+    flex-direction: column;
+  }
 }
 
 #refer .header p {
   color: #000;
   line-height: 50px;
+
+  @media all and (max-width: 500px) {
+    text-align: center;
+  }
 }
 
 #refer .header .byline {
@@ -412,16 +422,11 @@ html.home {
   font-weight: 700;
   font-size: 30px;
   margin-right: 20px;
-  // font-weight: normal;
-  // font-size: 0;
-  // line-height: 0;
-  // margin-right: 14px;
-  // letter-spacing: 1px;
-  // background: image-url("refer/logo.png") 0 0 no-repeat;
-  // background-size: 106px 19px;
-  // height: 19px;
-  // width: 106px;
-  // margin-top: 15px;
+
+  @media all and (max-width: 500px) {
+    text-align: center;
+    margin-right: 0;
+  }
 }
 
 #refer .hero {
@@ -441,10 +446,18 @@ html.home {
   letter-spacing: 0.13em;
   margin: 0 auto;
 
+  @media all and (max-width: 500px) {
+    min-height: 100vh;
+  }
+
   .why {
     font-size: 16px;
     font-family: 'Freight Sans Pro';
     text-transform: uppercase;
+
+    @media all and (max-width: 500px) {
+      margin: 40px 0;
+    }
   }
   .title {
     font-size: 38px;
@@ -454,6 +467,10 @@ html.home {
     font-weight: 700;
     letter-spacing: 0;
     margin-top: 70px;
+
+    @media all and (max-width: 500px) {
+      margin-top: 10px;
+    }
   }
   .subtitle {
     font-size: 24px;
